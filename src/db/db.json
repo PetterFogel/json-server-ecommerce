@@ -1,5 +1,46 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "posters": [
+    {
+      "id": 1,
+      "title": "Forrest",
+      "description": "A nice poster of the northern dark forrest.",
+      "category": "nature",
+      "url": "https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    },
+    {
+      "id": 2,
+      "title": "Desert",
+      "description": "Image of the hot desert of Sahara.",
+      "category": "nature",
+      "url": "https://images.pexels.com/photos/3284167/pexels-photo-3284167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 3,
+      "title": "Beach",
+      "description": "A nice view of the tropical paradise.",
+      "category": "nature",
+      "url": "https://images.pexels.com/photos/3214944/pexels-photo-3214944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 4,
+      "title": "Mountains",
+      "description": "Overview of the misty mountains",
+      "category": "nature",
+      "url": "https://images.pexels.com/photos/3389536/pexels-photo-3389536.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 5,
+      "title": "Dog",
+      "description": "A poster of good boy.",
+      "category": "animals",
+      "url": "https://images.pexels.com/photos/2820134/pexels-photo-2820134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 6,
+      "title": "Cat",
+      "description": "Image of a grumpy one.",
+      "category": "animals",
+      "url": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  ]
 }

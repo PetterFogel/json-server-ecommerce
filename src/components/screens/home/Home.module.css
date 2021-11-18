@@ -1,0 +1,46 @@
+.section {
+  background-image: url("../../../assets/home-bg.jpg");
+  background-size: cover;
+  object-position: center;
+  background-position: center;
+  height: 93vh;
+}
+
+.homeContainer {
+  max-width: 1300px;
+  margin: auto;
+  height: 100%;
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.introHolder {
+  margin-top: 7rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.pageTitle {
+  font-size: 6rem;
+  color: #000;
+}
+
+.pageSubtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pageBtn {
+  padding: 0.9rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}

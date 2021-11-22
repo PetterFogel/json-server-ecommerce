@@ -25,9 +25,10 @@ const Products: FC = () => {
                 className={classes.imageStyle}
               />
             </div>
-            <h4 className={classes.productTitle}>{product.title}</h4>
-            {/* <p className={classes.productTitle}>{product.description}</p>
-            <p className={classes.productTitle}>{product.category}</p> */}
+            <div className={classes.productInfo}>
+              <h4 className={classes.productTitle}>{product.title}</h4>
+              <p>{product.price} kr</p>
+            </div>
           </div>
         ))}
       </div>

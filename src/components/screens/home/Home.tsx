@@ -15,7 +15,7 @@ const Home: FC = () => {
             className={classes.pageBtn}
             onClick={() => navigate("/products")}
           >
-            Products
+            PRODUCTS
           </button>
         </div>
       </div>

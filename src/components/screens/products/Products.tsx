@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { FC, useEffect, useState } from "react";
 import { Product } from "../../../models/product";
 import classes from "./Products.module.css";
+import { BsPlusCircle } from "react-icons/bs";
 
 const Products: FC = () => {
   const [data, setData] = useState<Product[]>([]);
@@ -46,8 +47,9 @@ const Products: FC = () => {
               </div>
               <div className={classes.productInfo}>
                 <h4 className={classes.productTitle}>{product.title}</h4>
-                <p>{product.price} kr</p>
+                <BsPlusCircle className={classes.plusIcon} />
               </div>
+              <p>{product.price} kr</p>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
+import { BsBag } from "react-icons/bs";
 
 const Header: FC = () => {
   return (
@@ -18,6 +19,9 @@ const Header: FC = () => {
           <Link to="/about" className={classes.link}>
             About
           </Link>
+        </li>
+        <li>
+          <BsBag />
         </li>
       </ul>
     </header>

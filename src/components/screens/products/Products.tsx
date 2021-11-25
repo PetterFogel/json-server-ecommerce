@@ -1,31 +1,14 @@
-import axios from "axios";
-import React, { FC, useEffect, useState } from "react";
-import { Product } from "../../../models/product";
+import { FC, useContext, useEffect } from "react";
 import classes from "./Products.module.css";
 import { BsPlusCircle } from "react-icons/bs";
+import Context from "../../../context/Context";
 
 const Products: FC = () => {
-  const [data, setData] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  const { data, isLoading, error, sendRequest } = useContext(Context);
 
   useEffect(() => {
-    fetchData();
+    sendRequest("http://localhost:3000/posters");
   }, []);
-
-  const fetchData = async () => {
-    setIsLoading(true);
-    try {
-      const response = await axios.get("http://localhost:3000/posters");
-      console.log(response);
-      const data = response.data;
-      setData(data);
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-      setError(true);
-    }
-  };
 
   if (error) return <p>Oops! Something went wrong...</p>;
 

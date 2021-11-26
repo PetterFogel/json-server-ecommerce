@@ -55,6 +55,12 @@
 .plusIcon {
   font-size: 1.5rem;
   cursor: pointer;
+  color: #333;
+  transition: all 300ms ease;
+}
+
+.plusIcon:hover {
+  transform: scale(1.2);
 }
 
 .loading {

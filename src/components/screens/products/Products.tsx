@@ -16,7 +16,7 @@ const Products: FC = () => {
     <section className={classes.section}>
       <h2 className={classes.sectionTitle}>Products</h2>
       {isLoading ? (
-        <p>Loading...</p>
+        <p className={classes.loading}>Loading...</p>
       ) : (
         <div className={classes.productContainer}>
           {data.map((product) => (

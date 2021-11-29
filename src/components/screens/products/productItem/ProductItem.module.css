@@ -1,0 +1,46 @@
+.productHolder {
+  margin-bottom: 3rem;
+}
+
+.imageHolder {
+  height: 25rem;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #cecece;
+  margin-bottom: 1rem;
+  transition: all 150ms ease;
+}
+
+.imageHolder:hover {
+  padding: 0rem;
+  cursor: pointer;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.plusIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: all 300ms ease;
+}
+
+.plusIcon:hover {
+  transform: scale(1.2);
+}

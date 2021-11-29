@@ -1,0 +1,22 @@
+.section {
+  max-width: 1300px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.sectionTitle {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 5rem;
+}

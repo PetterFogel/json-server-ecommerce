@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { BsPlusCircle } from "react-icons/bs";
+import Context from "../../../../context/Context";
 import { Poster } from "../../../../models/product";
 import classes from "./ProductItem.module.css";
 
@@ -8,6 +9,8 @@ interface ProductItemProps {
 }
 
 const ProductItem: FC<ProductItemProps> = ({ poster }: ProductItemProps) => {
+  const { addToCart } = useContext(Context);
+
   return (
     <div key={poster.id} className={classes.productHolder}>
       <div className={classes.imageHolder}>
@@ -15,7 +18,7 @@ const ProductItem: FC<ProductItemProps> = ({ poster }: ProductItemProps) => {
       </div>
       <div className={classes.productInfo}>
         <h4 className={classes.productTitle}>{poster.title}</h4>
-        <BsPlusCircle className={classes.plusIcon} />
+        <BsPlusCircle className={classes.plusIcon} onClick={addToCart} />
       </div>
       <p>{poster.price} kr</p>
     </div>

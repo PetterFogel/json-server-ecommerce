@@ -1,9 +1,12 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
+import { FC, useContext } from "react";
 import classes from "./Header.module.css";
+import Context from "../../../context/Context";
+import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 
 const Header: FC = () => {
+  const { cart } = useContext(Context);
+
   return (
     <header className={classes.header}>
       <Link to="/" className={classes.logo}>
@@ -22,6 +25,7 @@ const Header: FC = () => {
         </li>
         <li>
           <BsBag />
+          {cart}
         </li>
       </ul>
     </header>

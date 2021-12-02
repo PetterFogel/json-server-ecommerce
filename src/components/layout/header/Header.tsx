@@ -7,6 +7,11 @@ import { BsBag } from "react-icons/bs";
 const Header: FC = () => {
   const { cart } = useContext(Context);
 
+  const ifCartHasItemsHandler = () => {
+    if (cart >= 1) return true;
+    return false;
+  };
+
   return (
     <header className={classes.header}>
       <Link to="/" className={classes.logo}>
@@ -25,7 +30,7 @@ const Header: FC = () => {
         </li>
         <li>
           <BsBag />
-          {cart}
+          {ifCartHasItemsHandler() && cart}
         </li>
       </ul>
     </header>

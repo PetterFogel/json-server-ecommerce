@@ -16,13 +16,23 @@
 .ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-width: 200px;
   text-decoration: none;
   list-style: none;
+  height: 100%;
+  position: relative;
 }
 
 .link {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
+}
+
+.cartItems {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10%;
+  right: -5%;
 }

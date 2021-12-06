@@ -18,7 +18,10 @@ const ProductItem: FC<ProductItemProps> = ({ poster }: ProductItemProps) => {
       </div>
       <div className={classes.productInfo}>
         <h4 className={classes.productTitle}>{poster.title}</h4>
-        <BsPlusCircle className={classes.plusIcon} onClick={addToCart} />
+        <BsPlusCircle
+          className={classes.plusIcon}
+          onClick={() => addToCart(poster)}
+        />
       </div>
       <p>{poster.price} kr</p>
     </div>

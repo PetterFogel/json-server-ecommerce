@@ -6,8 +6,8 @@ interface ContextProps {
   data: Poster[];
   isLoading: boolean;
   error: boolean;
-  cartQuantity: number;
-  addToCart: () => void;
+  cart: Poster[];
+  addToCart: (poster: Poster) => void;
   sendRequest: (url: string) => void;
 }
 
@@ -15,7 +15,7 @@ const Context = createContext<ContextProps>({
   data: [],
   isLoading: false,
   error: false,
-  cartQuantity: 0,
+  cart: [],
   addToCart: () => {},
   sendRequest: (url: string) => {},
 });
@@ -24,7 +24,7 @@ export const ContextProvider: FC = ({ children }) => {
   const [data, setData] = useState<Poster[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const [cartQuantity, setCartQuantity] = useState<number>(0);
+  const [cart, setCart] = useState<Poster[]>([]);
 
   const sendRequestHandler = async (url: string) => {
     setIsLoading(true);
@@ -39,15 +39,15 @@ export const ContextProvider: FC = ({ children }) => {
     }
   };
 
-  const addToCartHandler = () => {
-    setCartQuantity(cartQuantity + 1);
+  const addToCartHandler = (poster: Poster) => {
+    setCart([...cart, poster]);
   };
 
   const contextValue: ContextProps = {
     data,
     isLoading,
     error,
-    cartQuantity,
+    cart,
     addToCart: addToCartHandler,
     sendRequest: sendRequestHandler,
   };

@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 
 const Header: FC = () => {
-  const { cartQuantity } = useContext(Context);
+  const { cart } = useContext(Context);
 
   const ifCartHasItemsHandler = () => {
-    if (cartQuantity >= 1) return true;
+    if (cart.length >= 1) return true;
     return false;
   };
 
@@ -29,9 +29,9 @@ const Header: FC = () => {
           </Link>
         </li>
         <li>
-          <BsBag />
+          <BsBag style={{ cursor: "pointer" }} />
           {ifCartHasItemsHandler() && (
-            <span className={classes.cartItems}>{cartQuantity}</span>
+            <span className={classes.cartItems}>{cart.length}</span>
           )}
         </li>
       </ul>

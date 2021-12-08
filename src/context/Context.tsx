@@ -9,6 +9,7 @@ interface ContextProps {
   cart: Poster[];
   addToCart: (poster: Poster) => void;
   sendRequest: (url: string) => void;
+  openCart: () => void;
 }
 
 const Context = createContext<ContextProps>({
@@ -18,6 +19,7 @@ const Context = createContext<ContextProps>({
   cart: [],
   addToCart: () => {},
   sendRequest: (url: string) => {},
+  openCart: () => {},
 });
 
 export const ContextProvider: FC = ({ children }) => {
@@ -25,6 +27,7 @@ export const ContextProvider: FC = ({ children }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [cart, setCart] = useState<Poster[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
 
   const sendRequestHandler = async (url: string) => {
     setIsLoading(true);
@@ -43,6 +46,10 @@ export const ContextProvider: FC = ({ children }) => {
     setCart([...cart, poster]);
   };
 
+  const openCartHandler = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   const contextValue: ContextProps = {
     data,
     isLoading,
@@ -50,6 +57,7 @@ export const ContextProvider: FC = ({ children }) => {
     cart,
     addToCart: addToCartHandler,
     sendRequest: sendRequestHandler,
+    openCart: openCartHandler,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

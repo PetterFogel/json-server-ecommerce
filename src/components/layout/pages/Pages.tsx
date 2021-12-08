@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "../screens/about/About";
-import Home from "../screens/home/Home";
-import Products from "../screens/products/products/Products";
+import About from "../../screens/about-sceen/About";
+import Home from "../../screens/home-screen/Home";
+import Products from "../../screens/products-screen/products/Products";
 
 const Pages: FC = () => {
   return (

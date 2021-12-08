@@ -1,7 +1,7 @@
 import { FC, useContext, useEffect } from "react";
 import classes from "./Products.module.css";
 import Context from "../../../../context/Context";
-import ProductItem from "../productItem/ProductItem";
+import ProductItem from "../../../layout/productItem/ProductItem";
 
 const Products: FC = () => {
   const { data, isLoading, error, sendRequest } = useContext(Context);

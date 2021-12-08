@@ -1,7 +1,7 @@
 import React, { FC, useContext } from "react";
 import { BsPlusCircle } from "react-icons/bs";
-import Context from "../../../../context/Context";
-import { Poster } from "../../../../models/product";
+import Context from "../../../context/Context";
+import { Poster } from "../../../models/product";
 import classes from "./ProductItem.module.css";
 
 interface ProductItemProps {

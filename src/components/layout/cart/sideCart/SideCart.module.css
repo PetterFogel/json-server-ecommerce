@@ -1,0 +1,21 @@
+.CartContainer {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90vh;
+  width: 20rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.CartTile {
+  font-weight: 400;
+}
+
+.CloseIcon {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  cursor: pointer;
+}

@@ -1,12 +1,13 @@
 import axios from "axios";
 import { createContext, FC, useState } from "react";
-import { Poster } from "../models/product";
+import { Poster } from "../models/Poster";
 
 interface ContextProps {
   data: Poster[];
   isLoading: boolean;
   error: boolean;
   cart: Poster[];
+  isCartOpen: boolean;
   addToCart: (poster: Poster) => void;
   sendRequest: (url: string) => void;
   openCart: () => void;
@@ -17,6 +18,7 @@ const Context = createContext<ContextProps>({
   isLoading: false,
   error: false,
   cart: [],
+  isCartOpen: false,
   addToCart: () => {},
   sendRequest: (url: string) => {},
   openCart: () => {},
@@ -55,6 +57,7 @@ export const ContextProvider: FC = ({ children }) => {
     isLoading,
     error,
     cart,
+    isCartOpen,
     addToCart: addToCartHandler,
     sendRequest: sendRequestHandler,
     openCart: openCartHandler,

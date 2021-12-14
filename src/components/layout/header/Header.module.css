@@ -4,6 +4,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0rem 2rem;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .logo {

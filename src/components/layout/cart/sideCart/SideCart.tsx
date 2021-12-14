@@ -10,14 +10,14 @@ const SideCart: FC = () => {
     <div className={classes.CartContainer}>
       <BsXLg className={classes.CloseIcon} onClick={openCart} />
       <h3 className={classes.CartTile}>Your Cart</h3>
-      <div>
+      <div className={classes.CartItemsContainer}>
         {cart.map((item) => (
-          <div>
-            <div>
-              <img src={item.url} alt="poster" />
+          <div className={classes.CartItemsHolder}>
+            <div className={classes.imageHolder}>
+              <img src={item.url} alt="poster" className={classes.imageStyle} />
             </div>
-            <div>
-              <h4>{item.title}</h4>
+            <div className={classes.CartItemsInfo}>
+              <h3 className={classes.price}>{item.title}</h3>
               <p>{item.price}</p>
             </div>
           </div>

@@ -1,12 +1,13 @@
 .CartContainer {
   background: #fff;
   position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 90vh;
   width: 20rem;
   text-align: center;
-  padding: 1rem;
+  margin-top: 10vh;
 }
 
 .CartTile {
@@ -18,4 +19,40 @@
   top: 0%;
   right: 10%;
   cursor: pointer;
+}
+
+.CartItemsContainer {
+  height: 100%;
+  padding: 1rem 0rem 2rem 0rem;
+}
+
+.CartItemsHolder {
+  height: 8rem;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  padding: 1rem;
+}
+
+.imageHolder {
+  height: 100%;
+  width: 5rem;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.CartItemsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0.5rem;
+}
+
+.price {
+  margin-bottom: 0.5rem;
 }

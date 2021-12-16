@@ -5,4 +5,5 @@ export interface Poster {
   description: string;
   category: string;
   url: string;
+  qty: number;
 }

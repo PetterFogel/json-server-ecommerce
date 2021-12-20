@@ -47,7 +47,17 @@ export const ContextProvider: FC = ({ children }) => {
   };
 
   const addToCartHandler = (poster: Poster) => {
+    const exist = cart.find((cartItem) => cartItem.id === poster.id);
+    if (exist) return increaseQtyHandler(poster);
     setCart([...cart, poster]);
+  };
+
+  const increaseQtyHandler = (poster: Poster) => {
+    setCart((cart) =>
+      cart.map((item) =>
+        item.id === poster.id ? { ...item, qty: item.qty + 1 } : item
+      )
+    );
   };
 
   const openCartHandler = () => {

@@ -19,7 +19,8 @@ const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
         </div>
         <div className={classes.CartItemsInfo}>
           <h3 className={classes.price}>{cartItem.title}</h3>
-          <p>{cartItem.price}</p>
+          <p>{cartItem.price} kr</p>
+          <p>QTY: {cartItem.qty}</p>
         </div>
       </div>
       <BiTrashAlt

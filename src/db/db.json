@@ -3,7 +3,7 @@
     {
       "id": "3564",
       "title": "Forrest",
-      "price": "599,00",
+      "price": 599.0,
       "description": "A nice poster of the northern dark forrest.",
       "category": "nature",
       "url": "https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
@@ -12,7 +12,7 @@
     {
       "id": "1325",
       "title": "Dog",
-      "price": "999,00",
+      "price": 999.0,
       "description": "A poster of good boy.",
       "category": "animals",
       "url": "https://images.pexels.com/photos/2820134/pexels-photo-2820134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -21,7 +21,7 @@
     {
       "id": "9023",
       "title": "Desert",
-      "price": "699,00",
+      "price": 699.0,
       "description": "Image of the hot desert of Sahara.",
       "category": "nature",
       "url": "https://images.pexels.com/photos/3284167/pexels-photo-3284167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -30,7 +30,7 @@
     {
       "id": "1641",
       "title": "Beach",
-      "price": "459,00",
+      "price": 459.0,
       "description": "A nice view of the tropical paradise.",
       "category": "nature",
       "url": "https://images.pexels.com/photos/3214944/pexels-photo-3214944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -39,7 +39,7 @@
     {
       "id": "0154",
       "title": "Mountains",
-      "price": "299,00",
+      "price": 299.0,
       "description": "Overview of the misty mountains",
       "category": "nature",
       "url": "https://images.pexels.com/photos/3389536/pexels-photo-3389536.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -48,7 +48,7 @@
     {
       "id": "9432",
       "title": "Cat",
-      "price": "199,00",
+      "price": 199.0,
       "description": "Image of a grumpy one.",
       "category": "animals",
       "url": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",

@@ -11,6 +11,11 @@ interface CartItemProps {
 const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
   const { removeItemFromCart } = useContext(Context);
 
+  const checkPriceTimesQty = () => {
+    const totalPrice = cartItem.qty * parseInt(cartItem.price);
+    return totalPrice;
+  };
+
   return (
     <div className={classes.CartItemContainer}>
       <div className={classes.CartItemsHolder}>
@@ -20,7 +25,9 @@ const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
         <div className={classes.CartItemsInfo}>
           <h3 className={classes.price}>{cartItem.title}</h3>
           <p>{cartItem.price} kr</p>
-          <p>QTY: {cartItem.qty}</p>
+          <p>
+            {cartItem.qty} x {checkPriceTimesQty()}
+          </p>
         </div>
       </div>
       <BiTrashAlt

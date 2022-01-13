@@ -12,6 +12,7 @@ interface ContextProps {
   sendRequest: (url: string) => void;
   openCart: () => void;
   removeItemFromCart: (itemId: string) => void;
+  emptyCart: () => void;
 }
 
 const Context = createContext<ContextProps>({
@@ -24,6 +25,7 @@ const Context = createContext<ContextProps>({
   sendRequest: (url: string) => {},
   openCart: () => {},
   removeItemFromCart: (itemId: string) => {},
+  emptyCart: () => {},
 });
 
 export const ContextProvider: FC = ({ children }) => {
@@ -68,6 +70,10 @@ export const ContextProvider: FC = ({ children }) => {
     setCart(cart.filter((cartItem) => cartItem.id !== itemId));
   };
 
+  const emptyCartHandler = () => {
+    setCart([]);
+  };
+
   const contextValue: ContextProps = {
     data,
     isLoading,
@@ -78,6 +84,7 @@ export const ContextProvider: FC = ({ children }) => {
     sendRequest: sendRequestHandler,
     openCart: openCartHandler,
     removeItemFromCart: removeItemFromCartHandler,
+    emptyCart: emptyCartHandler,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

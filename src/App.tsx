@@ -1,5 +1,5 @@
 import { FC, useContext } from "react";
-import { Routes } from "./components/layout/routes/Routes";
+import { Routes } from "./routes/Routes";
 import Header from "./components/layout/header/Header";
 import Context from "./context/Context";
 import SideCart from "./components/layout/cart/sideCart/SideCart";

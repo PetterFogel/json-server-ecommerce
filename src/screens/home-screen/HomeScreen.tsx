@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import classes from "./Home.module.css";
+import classes from "./HomeScreen.module.css";
 
 const Home: FC = () => {
   const navigate = useNavigate();

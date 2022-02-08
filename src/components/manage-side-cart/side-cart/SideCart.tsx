@@ -1,8 +1,8 @@
 import React, { FC, useContext } from "react";
 import classes from "./SideCart.module.css";
 import { BsXLg } from "react-icons/bs";
-import Context from "../../../../context/Context";
-import CartItem from "../cartItem/CartItem";
+import Context from "../../../context/Context";
+import CartItem from "../cart-item/CartItem";
 
 const SideCart: FC = () => {
   const { cart, openCart, emptyCart } = useContext(Context);

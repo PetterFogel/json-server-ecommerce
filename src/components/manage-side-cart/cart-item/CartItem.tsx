@@ -1,8 +1,8 @@
 import React, { FC, useContext } from "react";
-import { Poster } from "../../../../models/Poster";
+import { Poster } from "../../../models/Poster";
 import classes from "./CartItem.module.css";
 import { BiTrashAlt } from "react-icons/bi";
-import Context from "../../../../context/Context";
+import Context from "../../../context/Context";
 
 interface CartItemProps {
   cartItem: Poster;

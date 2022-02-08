@@ -1,5 +1,5 @@
 import { FC, useContext, useEffect } from "react";
-import { ProductItem } from "../../components/manage-products/product-item/ProductItem";
+import { ProductItem } from "../../components/manage-products/products-item/ProductsItem";
 import { Context } from "../../context/Context";
 import classes from "./ProductsScreen.module.css";
 

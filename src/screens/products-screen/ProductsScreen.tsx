@@ -7,7 +7,7 @@ const Products: FC = () => {
   const { data, isLoading, error, sendRequest } = useContext(Context);
 
   useEffect(() => {
-    sendRequest(`${process.env.REACT_APP_API_BASEURL}/api/posters`);
+    sendRequest(`${process.env.REACT_APP_API_BASEURL}/posters`);
   }, []);
 
   if (error) return <p>Oops! Something went wrong...</p>;

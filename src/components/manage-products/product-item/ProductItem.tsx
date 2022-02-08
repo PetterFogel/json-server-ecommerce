@@ -1,6 +1,6 @@
-import React, { FC, useContext } from "react";
+import { FC, useContext } from "react";
 import { BsPlusCircle } from "react-icons/bs";
-import Context from "../../../context/Context";
+import { Context } from "../../../context/Context";
 import { Poster } from "../../../models/Poster";
 import classes from "./ProductItem.module.css";
 
@@ -8,7 +8,9 @@ interface ProductItemProps {
   poster: Poster;
 }
 
-const ProductItem: FC<ProductItemProps> = ({ poster }: ProductItemProps) => {
+export const ProductItem: FC<ProductItemProps> = ({
+  poster,
+}: ProductItemProps) => {
   const { addToCart } = useContext(Context);
 
   return (
@@ -27,5 +29,3 @@ const ProductItem: FC<ProductItemProps> = ({ poster }: ProductItemProps) => {
     </div>
   );
 };
-
-export default ProductItem;

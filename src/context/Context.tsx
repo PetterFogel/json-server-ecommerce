@@ -15,7 +15,7 @@ interface ContextProps {
   emptyCart: () => void;
 }
 
-const Context = createContext<ContextProps>({
+export const Context = createContext<ContextProps>({
   data: [],
   isLoading: false,
   error: false,
@@ -89,5 +89,3 @@ export const ContextProvider: FC = ({ children }) => {
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
-
-export default Context;

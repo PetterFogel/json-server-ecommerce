@@ -1,10 +1,10 @@
 import { FC, useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
+import { Context } from "../../context/Context";
 import classes from "./Header.module.css";
-import Context from "../../context/Context";
 
-const Header: FC = () => {
+export const Header: FC = () => {
   const { cart, openCart } = useContext(Context);
 
   const ifCartHasItemsHandler = () => {
@@ -38,5 +38,3 @@ const Header: FC = () => {
     </header>
   );
 };
-
-export default Header;

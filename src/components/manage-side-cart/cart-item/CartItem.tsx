@@ -1,14 +1,14 @@
-import React, { FC, useContext } from "react";
+import { FC, useContext } from "react";
 import { Poster } from "../../../models/Poster";
-import classes from "./CartItem.module.css";
 import { BiTrashAlt } from "react-icons/bi";
-import Context from "../../../context/Context";
+import { Context } from "../../../context/Context";
+import classes from "./CartItem.module.css";
 
 interface CartItemProps {
   cartItem: Poster;
 }
 
-const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
+export const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
   const { removeItemFromCart } = useContext(Context);
 
   const checkPriceTimesQty = () => {
@@ -37,5 +37,3 @@ const CartItem: FC<CartItemProps> = ({ cartItem }: CartItemProps) => {
     </div>
   );
 };
-
-export default CartItem;

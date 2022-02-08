@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./HomeScreen.module.css";
 
-const Home: FC = () => {
+export const Home: FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -22,5 +22,3 @@ const Home: FC = () => {
     </section>
   );
 };
-
-export default Home;

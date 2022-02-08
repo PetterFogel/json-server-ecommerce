@@ -1,10 +1,10 @@
-import React, { FC, useContext } from "react";
-import classes from "./SideCart.module.css";
+import { FC, useContext } from "react";
 import { BsXLg } from "react-icons/bs";
-import Context from "../../../context/Context";
-import CartItem from "../cart-item/CartItem";
+import { Context } from "../../../context/Context";
+import { CartItem } from "../cart-item/CartItem";
+import classes from "./SideCart.module.css";
 
-const SideCart: FC = () => {
+export const SideCart: FC = () => {
   const { cart, openCart, emptyCart } = useContext(Context);
 
   return (
@@ -26,5 +26,3 @@ const SideCart: FC = () => {
     </div>
   );
 };
-
-export default SideCart;

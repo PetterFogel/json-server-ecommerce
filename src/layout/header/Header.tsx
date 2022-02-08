@@ -1,8 +1,8 @@
 import { FC, useContext } from "react";
-import classes from "./Header.module.css";
-import Context from "../../../context/Context";
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
+import classes from "./Header.module.css";
+import Context from "../../context/Context";
 
 const Header: FC = () => {
   const { cart, openCart } = useContext(Context);

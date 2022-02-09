@@ -1,5 +1,5 @@
 import { FC, useContext, useEffect } from "react";
-import { ProductItem } from "../../components/manage-products/products-item/ProductsItem";
+import { ProductsList } from "../../components/manage-products/products-list/ProductsList";
 import { Context } from "../../context/Context";
 import classes from "./ProductsScreen.module.css";
 
@@ -18,11 +18,7 @@ export const Products: FC = () => {
       {isLoading ? (
         <p className={classes.loading}>Loading...</p>
       ) : (
-        <div className={classes.productContainer}>
-          {data.map((poster) => (
-            <ProductItem key={poster.id} poster={poster} />
-          ))}
-        </div>
+        <ProductsList posters={data} />
       )}
     </section>
   );

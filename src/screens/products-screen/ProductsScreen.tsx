@@ -10,7 +10,8 @@ export const Products: FC = () => {
     sendRequest(`${process.env.REACT_APP_API_BASEURL}/posters`);
   }, []);
 
-  if (error) return <p>Oops! Something went wrong...</p>;
+  if (error)
+    return <p className={classes.error}>Oops! Something went wrong... :(</p>;
 
   return (
     <section className={classes.section}>

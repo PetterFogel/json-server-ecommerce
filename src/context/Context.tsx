@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, FC, useState } from "react";
 import { Poster } from "../models/Poster";
+import { Response } from "../models/Response";
 
 interface ContextProps {
   data: Poster[];
@@ -29,22 +30,33 @@ export const Context = createContext<ContextProps>({
 });
 
 export const ContextProvider: FC = ({ children }) => {
-  const [data, setData] = useState<Poster[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  const [response, setResponse] = useState<Response>({
+    data: [],
+    isLoading: false,
+    error: false,
+  });
   const [cart, setCart] = useState<Poster[]>([]);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
 
   const sendRequestHandler = async (url: string) => {
-    setIsLoading(true);
     try {
+      setResponse((prevState) => ({
+        ...prevState,
+        isLoading: true,
+      }));
       const response = await axios.get(url);
       const data = response.data;
-      setData(data);
-      setIsLoading(false);
+      setResponse((prevState) => ({
+        ...prevState,
+        data: data,
+        isLoading: false,
+      }));
     } catch (error) {
-      setIsLoading(false);
-      setError(true);
+      setResponse((prevState) => ({
+        ...prevState,
+        error: true,
+        isLoading: false,
+      }));
     }
   };
 
@@ -75,9 +87,9 @@ export const ContextProvider: FC = ({ children }) => {
   };
 
   const contextValue: ContextProps = {
-    data,
-    isLoading,
-    error,
+    data: response.data,
+    isLoading: response.isLoading,
+    error: response.error,
     cart,
     isCartOpen,
     addToCart: addToCartHandler,
